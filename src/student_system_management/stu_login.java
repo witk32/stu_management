@@ -15,40 +15,40 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 	JTextField jtf1,jtf2;
 	JPasswordField jpf;
 	JPanel jp1,jp2,jp3,jp4;
-	
+
 	public stu_login()
 	{
-		this.setTitle("学生管理系统 github v1.1");
+		this.setTitle("学生管理系统 github v1.2");
 		this.setSize(800, 600);
 		this.setLocation(250, 100);
 		this.setLayout(new GridLayout(4,1));
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		
+
 		//初始化组件
-		
+
 		jl1=new JLabel("学生管理系统");
 		jl2=new JLabel("用户名:");
 		jl3=new JLabel("密  码:");
 		Font font=new Font("Arial",Font.BOLD,25);
 		jl1.setFont(font);
-		
+
 		jtf1=new JTextField(20);
 		//添加enter激活
 		jtf1.addKeyListener(this);
 		jpf=new JPasswordField(20);
 		//添加enter激活
 		jpf.addKeyListener(this);
-		
+
 		jb1=new JButton("登录");
 		jb2=new JButton("退出");
-		
+
 		//加入JPanel 和JFrame
-		
+
 		jp1=new JPanel();
 		jp2=new JPanel();
 		jp3=new JPanel();
 		jp4=new JPanel();
-		
+
 		jp1.add(jl1);
 		jp2.add(jl2);
 		jp2.add(jtf1);
@@ -56,10 +56,10 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 		jp3.add(jpf);
 		jp4.add(jb1);
 		jp4.add(jb2);
-		
 
 
-		
+
+
 		this.add(jp1);
 		this.add(jp2);
 		this.add(jp3);
@@ -70,10 +70,10 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 		jb2.addActionListener(this);
 		jb2.setActionCommand("esc");
 	}
-	
+
 
 	public static void main(String[] args) {
-		
+
 		stu_login sl=new stu_login();
 		sl.setVisible(true);
 
@@ -102,7 +102,7 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 				stu_AD sl=new stu_AD();
 				sl.setVisible(true);
 				this.dispose();
-				    
+
 				break;
 			case "TEACHER":
 				JOptionPane.showMessageDialog(null,"欢迎您："+log_id+"老师！", "登录成功", JOptionPane.INFORMATION_MESSAGE);
@@ -119,20 +119,20 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 				this.dispose();
 				break;
 			}
-			
+
 		}
 		else if(e.getActionCommand().equals("esc"))
 		{
 			System.exit(0);
 		}
-		
+
 	}
 
 
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 
@@ -149,7 +149,7 @@ public class stu_login extends JFrame implements ActionListener,KeyListener{
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
